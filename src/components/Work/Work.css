@@ -2,30 +2,7 @@
     background-color: transparent;
 }
 
-.section-header {
-    display: flex;
-    align-items: baseline;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-lg);
-    position: relative;
-}
 
-
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
-    flex-grow: 1;
-}
-
-.section-header::after {
-    content: '';
-    height: 1px;
-    background: var(--border-color);
-    flex-grow: 10;
-    align-self: center;
-}
 
 .projects-grid {
     display: grid;
