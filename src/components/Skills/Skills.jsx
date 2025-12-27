@@ -3,10 +3,18 @@ import './Skills.css';
 import { motion } from 'framer-motion';
 
 const skillsData = {
-    "Languages": ["JavaScript (ES6+)", "Python", "Java", "C++", "SQL"],
-    "Web Technologies": ["React.js", "Node.js", "Express", "HTML5/CSS3", "REST APIs"],
-    "AI & Data": ["Machine Learning", "TensorFlow", "Pandas", "NumPy", "Data Analysis"],
-    "Tools": ["Git/GitHub", "Docker", "VS Code", "Figma", "Postman"]
+    "Frontend Development": [
+        "React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "HTML5/CSS3", "Vue.js"
+    ],
+    "Backend & Database": [
+        "Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Firebase", "REST APIs", "GraphQL"
+    ],
+    "AI & Machine Learning": [
+        "TensorFlow", "PyTorch", "OpenAI API", "Hugging Face", "Pandas", "NumPy", "Scikit-learn", "Computer Vision"
+    ],
+    "DevOps & Tools": [
+        "Git/GitHub", "Docker", "AWS", "Vercel", "Figma", "Postman", "Jest", "CI/CD"
+    ]
 };
 
 const Skills = () => {
@@ -34,7 +42,7 @@ const Skills = () => {
                                     <motion.span
                                         key={skill}
                                         className="skill-pill"
-                                        whileHover={{ scale: 1.05 }}
+                                        whileHover={{ scale: 1.05, backgroundColor: "rgba(79, 70, 229, 0.2)" }}
                                     >
                                         {skill}
                                     </motion.span>

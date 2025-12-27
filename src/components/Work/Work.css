@@ -1,6 +1,5 @@
 .work {
     background-color: transparent;
-    /* Transparent to show global gradient */
 }
 
 .section-header {
@@ -51,12 +50,20 @@
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     box-shadow: 0 0 30px rgba(79, 70, 229, 0.15);
     border-color: var(--accent);
     transform: translateY(-10px);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-title {
@@ -70,12 +77,14 @@
     color: var(--gray);
     margin-bottom: var(--spacing-md);
     line-height: 1.5;
+    flex-grow: 1;
 }
 
 .project-tags {
     display: flex;
     gap: var(--spacing-xs);
     flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
 }
 
 .tag {
@@ -92,4 +101,25 @@
     background-color: rgba(79, 70, 229, 0.1);
     color: var(--accent);
     border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Project Links Buttons */
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+}
+
+.project-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 2px;
+    transition: all var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }

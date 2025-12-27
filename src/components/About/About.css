@@ -3,12 +3,12 @@
 }
 
 .about-text p {
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    line-height: 1.8;
     margin-bottom: var(--spacing-md);
     color: var(--white);
-    font-weight: 500;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    text-shadow: none;
 }
 
 /* Make every second paragraph slightly lighter */
@@ -18,16 +18,16 @@
 
 .about-text p:last-child {
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #666;
 }
 
 @media (max-width: 768px) {
     .about-text p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .about-text p:last-child {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }

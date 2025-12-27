@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Work.css';
 import { motion } from 'framer-motion';
 
@@ -7,19 +7,25 @@ const projects = [
         id: 1,
         title: 'AI Chatbot',
         description: 'A conversational AI assistant built with LLMs and Python.',
-        tags: ['Python', 'OpenAI', 'React']
+        tags: ['Python', 'OpenAI', 'React'],
+        demoLink: '#',
+        codeLink: '#'
     },
     {
         id: 2,
         title: 'E-commerce Platform',
         description: 'Full-stack shopping application with secure payments.',
-        tags: ['React', 'Node.js', 'MongoDB']
+        tags: ['React', 'Node.js', 'MongoDB'],
+        demoLink: '#',
+        codeLink: '#'
     },
     {
         id: 3,
         title: 'Task Management App',
         description: 'Productivity tool for teams with real-time updates.',
-        tags: ['Vue.js', 'Firebase', 'Tailwind']
+        tags: ['Vue.js', 'Firebase', 'Tailwind'],
+        demoLink: '#',
+        codeLink: '#'
     }
 ];
 
@@ -47,7 +53,7 @@ const Work = () => {
                         }
                     }}
                 >
-                    {projects.map((project, index) => (
+                    {projects.map((project) => (
                         <motion.div
                             className="project-card"
                             key={project.id}
@@ -64,6 +70,15 @@ const Work = () => {
                                     {project.tags.map(tag => (
                                         <span key={tag} className="tag">{tag}</span>
                                     ))}
+                                </div>
+
+                                <div className="project-links">
+                                    <a href={project.codeLink} className="project-link" target="_blank" rel="noreferrer">
+                                        View Code
+                                    </a>
+                                    <a href={project.demoLink} className="project-link" target="_blank" rel="noreferrer">
+                                        Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>

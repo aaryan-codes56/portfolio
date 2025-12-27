@@ -1,63 +1,54 @@
 import React from 'react';
 import './Hero.css';
 import { motion } from 'framer-motion';
-import resume from '../../assets/resume.pdf';
+import resumePdf from '../../assets/resume.pdf';
+import heroImage from '../../assets/hero-image.png';
 
 const Hero = () => {
     return (
-        <section className="hero section" id="hero">
+        <section className="hero" id="home">
             <div className="container hero-container">
-                <motion.div
-                    className="hero-content"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                            opacity: 1,
-                            transition: {
-                                staggerChildren: 0.15,
-                                delayChildren: 0.2
-                            }
-                        }
-                    }}
-                >
-                    <div className="name-wrapper">
-                        <motion.h1
-                            className="name"
-                            variants={{
-                                hidden: { y: 100 },
-                                visible: { y: 0, transition: { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] } }
-                            }}
-                        >
-                            Aaryan Krishna
-                        </motion.h1>
-                    </div>
-
-                    <motion.h2
-                        className="subtitle"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-                        }}
+                <div className="hero-content">
+                    <motion.div
+                        className="name-wrapper"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        B.Tech CS & AI @ Newton School of Technology
-                    </motion.h2>
+                        <h1 className="name">Aaryan<br />Krishna</h1>
+                    </motion.div>
+
+                    <motion.p
+                        className="subtitle"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
+                        Building digital experiences with clean code and creative design.
+                    </motion.p>
 
                     <motion.div
                         className="cta-buttons"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-                        }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 0.5 }}
                     >
-                        <a href={resume} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                        <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                             View Resume
                         </a>
-                        <button className="btn btn-secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+                        <a href="#contact" className="btn btn-secondary">
                             Contact Me
-                        </button>
+                        </a>
                     </motion.div>
+                </div>
+
+                <motion.div
+                    className="hero-image-container"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                >
+                    <img src={heroImage} alt="Aaryan Krishna" className="hero-image" />
                 </motion.div>
             </div>
         </section>

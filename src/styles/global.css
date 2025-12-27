@@ -13,6 +13,8 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     line-height: 1.5;
+    cursor: pointer;
+    /* Global pointer as requested */
 }
 
 body {
