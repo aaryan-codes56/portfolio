@@ -63,7 +63,7 @@
     font-weight: 500;
     border-radius: 50px;
     transition: all var(--transition-fast);
-    cursor: none;
+    cursor: pointer;
 }
 
 .btn:active {

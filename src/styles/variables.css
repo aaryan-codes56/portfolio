@@ -1,7 +1,8 @@
 :root {
   /* Colors */
   --black: #050505;
-  --white: #ffffff;
+  --white: #dedede;
+  /* Softened white */
   --gray: #9ca3af;
   --dark-gray: #1a1a1a;
   --light-gray: #ffffff10;
@@ -27,15 +28,4 @@
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.4s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --black: #ffffff;
-    --white: #0a0a0a;
-    --gray: #888888;
-    --accent: #333333;
-    --light-gray: #1a1a1a;
-    --dark-gray: #f5f5f5;
-  }
 }

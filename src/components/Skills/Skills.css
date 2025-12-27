@@ -27,7 +27,7 @@
     font-size: 0.9rem;
     color: var(--gray);
     transition: all var(--transition-fast);
-    cursor: none;
+    cursor: default;
 }
 
 .skill-pill:hover {
