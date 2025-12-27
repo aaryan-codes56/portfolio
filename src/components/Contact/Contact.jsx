@@ -23,7 +23,7 @@ const Contact = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="contact-info">
-                        <p className="contact-cta">Let's create something<br />impactful together.</p>
+                        <p className="contact-cta">Open to internships &<br />new opportunities.</p>
                         <p className="contact-subtext">
                             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
                         </p>

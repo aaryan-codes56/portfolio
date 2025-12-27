@@ -15,7 +15,10 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h1 className="name">Aaryan<br />Krishna</h1>
+                        <h1 className="name">
+                            Aaryan Krishna
+                            <span className="role-text">Full-Stack Developer</span>
+                        </h1>
                     </motion.div>
 
                     <motion.p
@@ -24,7 +27,8 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        Building digital experiences with clean code and creative design.
+                        Bridging the gap between complex algorithms and intuitive user experiences.
+                        I build scalable, high-performance web applications powered by modern AI.
                     </motion.p>
 
                     <motion.div
@@ -33,11 +37,11 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.5 }}
                     >
-                        <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                            View Resume
+                        <a href="#work" className="btn btn-primary">
+                            View Projects
                         </a>
-                        <a href="#contact" className="btn btn-secondary">
-                            Contact Me
+                        <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            Download Resume
                         </a>
                     </motion.div>
                 </div>

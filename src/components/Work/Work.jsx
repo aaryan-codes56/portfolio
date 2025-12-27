@@ -5,25 +5,25 @@ import { motion } from 'framer-motion';
 const projects = [
     {
         id: 1,
-        title: 'AI Chatbot',
-        description: 'A conversational AI assistant built with LLMs and Python.',
-        tags: ['Python', 'OpenAI', 'React'],
+        title: 'Enterprise AI Knowledge Base',
+        description: 'Engineered a RAG-based documentation assistant reducing support query time by 40%. Built with high-performance vector search.',
+        tags: ['Python', 'LangChain', 'React', 'FastAPI'],
         demoLink: '#',
         codeLink: '#'
     },
     {
         id: 2,
-        title: 'E-commerce Platform',
-        description: 'Full-stack shopping application with secure payments.',
-        tags: ['React', 'Node.js', 'MongoDB'],
+        title: 'Scalable E-Commerce Engine',
+        description: 'Microservices-based shopping platform handling 10k+ concurrent users. Integrated secure Stripe payments and real-time inventory.',
+        tags: ['Next.js', 'Go', 'PostgreSQL', 'Docker'],
         demoLink: '#',
         codeLink: '#'
     },
     {
         id: 3,
-        title: 'Task Management App',
-        description: 'Productivity tool for teams with real-time updates.',
-        tags: ['Vue.js', 'Firebase', 'Tailwind'],
+        title: 'Real-time Collaboration Suite',
+        description: 'Team productivity workspace with live cursor tracking and conflict-free data sync using WebSocket tech.',
+        tags: ['Vue.js', 'Firebase', 'WebSockets'],
         demoLink: '#',
         codeLink: '#'
     }
