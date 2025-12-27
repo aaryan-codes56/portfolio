@@ -123,3 +123,41 @@
     color: var(--accent);
     border-color: var(--accent);
 }
+
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    /* Pillow shape matching navbar */
+    transition: all var(--transition-medium);
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px);
+}
+
+.view-more-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+    transform: translateY(-2px);
+    padding-right: 2.5rem;
+    /* Slight expansion effect */
+}
+
+.view-more-btn .arrow {
+    transition: transform var(--transition-fast);
+}
+
+.view-more-btn:hover .arrow {
+    transform: translateX(5px);
+}

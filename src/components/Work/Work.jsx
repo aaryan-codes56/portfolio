@@ -35,7 +35,7 @@ const Work = () => {
             <div className="container">
                 <div className="section-header">
                     <span className="section-number">02</span>
-                    <h2 className="section-title">Selected Work</h2>
+                    <h2 className="section-title">My Work</h2>
                 </div>
 
                 <motion.div
@@ -84,6 +84,12 @@ const Work = () => {
                         </motion.div>
                     ))}
                 </motion.div>
+
+                <div className="view-more-container">
+                    <a href="https://github.com/aaryan-codes56" target="_blank" rel="noopener noreferrer" className="view-more-btn">
+                        View More on GitHub <span className="arrow">→</span>
+                    </a>
+                </div>
             </div>
         </section>
     );
