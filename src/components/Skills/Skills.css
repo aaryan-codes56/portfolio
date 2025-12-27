@@ -1,0 +1,36 @@
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.category-title {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--black);
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.skill-pill {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #555;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+    cursor: default;
+    background: var(--white);
+}
+
+.skill-pill:hover {
+    border-color: var(--black);
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}

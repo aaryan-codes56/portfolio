@@ -1,0 +1,44 @@
+.about {
+    background-color: var(--white);
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.about-text p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    color: var(--black);
+    font-weight: 500;
+}
+
+/* Make every second paragraph slightly lighter */
+.about-text p:nth-child(2) {
+    color: #555;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+@media (max-width: 768px) {
+    .about-text p {
+        font-size: 1.5rem;
+    }
+
+    .about-text p:last-child {
+        font-size: 1.2rem;
+    }
+}
