@@ -73,7 +73,6 @@
     border-color: rgba(79, 70, 229, 0.2);
 }
 
-/* Project Links Buttons */
 .project-links {
     display: flex;
     gap: var(--spacing-sm);
@@ -149,7 +148,6 @@
     border-color: var(--white);
     transform: translateY(-2px);
     padding-right: 2.5rem;
-    /* Slight expansion effect */
 }
 
 .view-more-btn .arrow {

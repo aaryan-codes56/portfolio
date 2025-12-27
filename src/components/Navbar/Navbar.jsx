@@ -12,7 +12,6 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
 
-            // Simple scroll spy
             const sections = ['home', 'about', 'work', 'skills', 'contact'];
             const current = sections.find(section => {
                 const element = document.getElementById(section);
