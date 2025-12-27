@@ -18,10 +18,10 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="contact-header">
+                    <div className="section-header">
                         <h2 className="section-title">Get in Touch</h2>
-                        <p className="contact-cta">Let's create something impactful.</p>
                     </div>
+                    <p className="contact-cta" style={{ marginBottom: '2rem', color: 'var(--gray)' }}>Let's create something impactful.</p>
 
                     <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
                         <div className={`form-group ${focusedInput === 'name' ? 'focused' : ''}`}>
