@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import logo from '../../assets/logo.png';
+
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -30,7 +32,7 @@ const Navbar = () => {
         >
             <div className="navbar-container container">
                 <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    AK.
+                    <img src={logo} alt="AK Logo" style={{ height: '40px', width: 'auto' }} />
                 </div>
                 <ul className="nav-links">
                     <li onClick={() => scrollToSection('about')}>About</li>
