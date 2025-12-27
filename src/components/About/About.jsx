@@ -13,7 +13,10 @@ const About = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="section-title">About Me</h2>
+                    <div className="section-header" style={{ marginBottom: '2rem', display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
+                        <span className="section-number" style={{ fontSize: '4rem', fontWeight: 800, color: 'transparent', WebkitTextStroke: '1px var(--gray)', opacity: 0.3, lineHeight: 1 }}>01</span>
+                        <h2 className="section-title" style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--white)', flexGrow: 1, textTransform: 'none', letterSpacing: 'normal' }}>About Me</h2>
+                    </div>
 
                     <div className="about-text">
                         <p>

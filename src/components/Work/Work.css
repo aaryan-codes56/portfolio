@@ -55,9 +55,9 @@
 }
 
 .project-card:hover {
-    box-shadow: 0 0 30px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 40px rgba(79, 70, 229, 0.25);
     border-color: var(--accent);
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
 .project-content {

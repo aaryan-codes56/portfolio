@@ -22,7 +22,7 @@ const Skills = () => {
         <section className="skills section" id="skills">
             <div className="container">
                 <div className="section-header">
-                    <span className="section-number">02</span>
+                    <span className="section-number">03</span>
                     <h2 className="section-title">Technical Expertise</h2>
                 </div>
 

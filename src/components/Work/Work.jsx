@@ -34,7 +34,7 @@ const Work = () => {
         <section className="work section" id="work">
             <div className="container">
                 <div className="section-header">
-                    <span className="section-number">01</span>
+                    <span className="section-number">02</span>
                     <h2 className="section-title">Selected Work</h2>
                 </div>
 
