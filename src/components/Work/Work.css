@@ -10,14 +10,7 @@
     position: relative;
 }
 
-.section-number {
-    font-size: 4rem;
-    font-weight: 800;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--gray);
-    opacity: 0.3;
-    line-height: 1;
-}
+
 
 .section-title {
     font-size: 2rem;
