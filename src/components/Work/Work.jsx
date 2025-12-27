@@ -26,6 +26,22 @@ const projects = [
         tags: ['Vue.js', 'Firebase', 'WebSockets'],
         demoLink: '#',
         codeLink: '#'
+    },
+    {
+        id: 4,
+        title: 'Predictive FinTech Dashboard',
+        description: 'Real-time financial analytics platform with interactive data visualization and ML-powered market trend forecasting.',
+        tags: ['TypeScript', 'D3.js', 'Java Spring', 'AWS'],
+        demoLink: '#',
+        codeLink: '#'
+    },
+    {
+        id: 5,
+        title: 'Autonomous Drone Navigation',
+        description: 'Computer vision system for obstacle avoidance and path planning in unstructured environments using SLAM algorithms.',
+        tags: ['C++', 'ROS', 'OpenCV', 'PyTorch'],
+        demoLink: '#',
+        codeLink: '#'
     }
 ];
 
