@@ -88,10 +88,10 @@ const Work = () => {
                                 </div>
 
                                 <div className="project-links">
-                                    <a href={project.codeLink} className="project-link" target="_blank" rel="noreferrer">
-                                        View Code
+                                    <a href={project.codeLink} className="project-link code-btn" target="_blank" rel="noreferrer">
+                                        Code
                                     </a>
-                                    <a href={project.demoLink} className="project-link" target="_blank" rel="noreferrer">
+                                    <a href={project.demoLink} className="project-link demo-btn" target="_blank" rel="noreferrer">
                                         Live Demo
                                     </a>
                                 </div>
