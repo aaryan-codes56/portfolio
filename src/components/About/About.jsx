@@ -13,7 +13,9 @@ const About = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="section-title">About Me</h2>
+                    <div className="section-header">
+                        <h2 className="section-title">About</h2>
+                    </div>
 
                     <div className="about-text">
                         <p>
