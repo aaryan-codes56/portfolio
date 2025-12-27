@@ -1,54 +1,83 @@
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: 300px;
+    height: 60px;
     z-index: 1000;
-    background: transparent;
-    transition: background-color var(--transition-medium), backdrop-filter var(--transition-medium);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0 2rem;
+    transition: all var(--transition-medium);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px) saturate(180%);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(5, 5, 5, 0.6);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
+    gap: var(--spacing-lg);
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
+    color: var(--white);
 }
 
 .nav-links {
     display: flex;
     gap: var(--spacing-md);
+    align-items: center;
 }
 
 .nav-links li {
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--gray);
     transition: color var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .nav-links li:hover {
-    color: var(--black);
+    color: var(--white);
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        top: auto;
+        bottom: 20px;
+        width: 90%;
+        min-width: auto;
+        padding: 0 1.5rem;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+        gap: 0;
+    }
+
     .nav-links {
-        display: none;
-        /* Mobile menu implementation can be added if requested, sticking to simple for now */
+        display: flex;
+        /* Keep visible on mobile for this specific pill design if fitting */
+        gap: var(--spacing-sm);
+    }
+
+    .nav-links li {
+        font-size: 0.75rem;
     }
 }

@@ -1,36 +1,25 @@
 .about {
-    background-color: var(--white);
-}
-
-.section-title {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gray);
-    margin-bottom: var(--spacing-md);
-}
-
-.about-text {
-    max-width: 800px;
+    background-color: transparent;
 }
 
 .about-text p {
     font-size: 2rem;
     line-height: 1.5;
     margin-bottom: var(--spacing-md);
-    color: var(--black);
+    color: var(--white);
     font-weight: 500;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Make every second paragraph slightly lighter */
 .about-text p:nth-child(2) {
-    color: #555;
+    color: var(--gray);
 }
 
 .about-text p:last-child {
     margin-bottom: 0;
     font-size: 1.5rem;
-    color: var(--gray);
+    color: #666;
 }
 
 @media (max-width: 768px) {

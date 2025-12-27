@@ -27,7 +27,10 @@ const Work = () => {
     return (
         <section className="work section" id="work">
             <div className="container">
-                <h2 className="section-title">Selected Work</h2>
+                <div className="section-header">
+                    <span className="section-number">01</span>
+                    <h2 className="section-title">Selected Work</h2>
+                </div>
 
                 <motion.div
                     className="projects-grid"

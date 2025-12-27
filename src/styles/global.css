@@ -8,17 +8,30 @@
 
 html {
     font-family: var(--font-primary);
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
     scroll-behavior: smooth;
     font-size: 16px;
     line-height: 1.5;
+    cursor: none;
+    /* Hide default cursor */
 }
 
 body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--black);
+    background-image:
+        radial-gradient(circle at 50% 0%, var(--glow-color) 0%, transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(79, 70, 229, 0.08) 0%, transparent 30%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+a,
+button {
+    cursor: none;
 }
 
 a {
@@ -63,15 +76,15 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--black);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: #333;
     border-radius: 5px;
-    border: 2px solid var(--white);
+    border: 2px solid var(--black);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--gray);
+    background: var(--accent);
 }

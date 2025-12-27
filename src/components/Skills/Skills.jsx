@@ -13,7 +13,10 @@ const Skills = () => {
     return (
         <section className="skills section" id="skills">
             <div className="container">
-                <h2 className="section-title">Technical Expertise</h2>
+                <div className="section-header">
+                    <span className="section-number">02</span>
+                    <h2 className="section-title">Technical Expertise</h2>
+                </div>
 
                 <div className="skills-container">
                     {Object.entries(skillsData).map(([category, skills], index) => (
