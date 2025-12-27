@@ -37,6 +37,7 @@
 
 .form-group.focused {
     border-color: var(--black);
+    border-bottom-width: 2px;
 }
 
 .form-group label {

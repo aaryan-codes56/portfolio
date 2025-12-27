@@ -11,17 +11,24 @@
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
+}
+
+.name-wrapper {
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
 }
 
 .name {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 800;
     letter-spacing: -0.05em;
-    margin-bottom: var(--spacing-sm);
-    background: linear-gradient(to right, var(--black), #444);
+    background: var(--black);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: 0;
 }
 
 .subtitle {
