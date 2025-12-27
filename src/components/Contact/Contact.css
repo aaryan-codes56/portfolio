@@ -3,28 +3,41 @@
     padding-bottom: var(--spacing-xl);
 }
 
-.contact-content {
-    max-width: 600px;
-    margin: 0 auto;
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+    align-items: start;
 }
 
-
+.contact-info {
+    padding-top: var(--spacing-md);
+}
 
 .contact-cta {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-top: var(--spacing-sm);
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
     color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.contact-subtext {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+    max-width: 400px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
     background: var(--glass-bg);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
@@ -66,6 +79,7 @@
     outline: none;
     padding: var(--spacing-xs) 0;
     color: var(--white);
+    resize: vertical;
 }
 
 .form-group input::placeholder,
@@ -80,10 +94,11 @@
     border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
-    align-self: center;
+    align-self: flex-start;
     margin-top: var(--spacing-sm);
     transition: all var(--transition-fast);
     border: 1px solid var(--white);
+    cursor: pointer;
 }
 
 .submit-btn:hover {
@@ -94,9 +109,8 @@
 
 .social-links {
     display: flex;
-    justify-content: center;
     gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -105,19 +119,44 @@
     transition: color var(--transition-fast);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    position: relative;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width var(--transition-fast);
 }
 
 .social-link:hover {
     color: var(--white);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 768px) {
-    .contact-cta {
-        font-size: 1.5rem;
+.social-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
 
-    .contact-form {
-        padding: var(--spacing-md);
+    .contact-cta {
+        font-size: 2rem;
+    }
+
+    .contact-subtext {
+        max-width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        text-align: center;
     }
 }

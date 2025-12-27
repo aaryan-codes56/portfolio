@@ -11,17 +11,30 @@ const Contact = () => {
     return (
         <section className="contact section" id="contact">
             <div className="container">
+                <div className="section-header">
+                    <h2 className="section-title">Get in Touch</h2>
+                </div>
+
                 <motion.div
-                    className="contact-content fit-content"
+                    className="contact-layout"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="section-header">
-                        <h2 className="section-title">Get in Touch</h2>
+                    <div className="contact-info">
+                        <p className="contact-cta">Let's create something<br />impactful together.</p>
+                        <p className="contact-subtext">
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                        </p>
+
+                        <div className="social-links">
+                            <a href="#" className="social-link">LinkedIn</a>
+                            <a href="#" className="social-link">GitHub</a>
+                            <a href="#" className="social-link">Twitter</a>
+                            <a href="mailto:hello@aaryankrishna.com" className="social-link">Email</a>
+                        </div>
                     </div>
-                    <p className="contact-cta" style={{ marginBottom: '2rem', color: 'var(--gray)' }}>Let's create something impactful.</p>
 
                     <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
                         <div className={`form-group ${focusedInput === 'name' ? 'focused' : ''}`}>
@@ -50,7 +63,7 @@ const Contact = () => {
                             <label htmlFor="message">Message</label>
                             <textarea
                                 id="message"
-                                rows="5"
+                                rows="4"
                                 onFocus={() => handleFocus('message')}
                                 onBlur={handleBlur}
                                 placeholder="Tell me about your project..."
@@ -61,13 +74,6 @@ const Contact = () => {
                             Send Message
                         </button>
                     </form>
-
-                    <div className="social-links">
-                        <a href="#" className="social-link">LinkedIn</a>
-                        <a href="#" className="social-link">GitHub</a>
-                        <a href="#" className="social-link">Twitter</a>
-                        <a href="mailto:hello@aaryankrishna.com" className="social-link">Email</a>
-                    </div>
                 </motion.div>
             </div>
         </section>
