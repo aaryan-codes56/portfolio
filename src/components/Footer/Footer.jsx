@@ -3,11 +3,20 @@ import './Footer.css';
 import logo from '../../assets/logo.png';
 
 const Footer = () => {
+    const [copied, setCopied] = React.useState(false);
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+    };
+
+    const handleCopyEmail = (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText('aaryankrishna009@gmail.com');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
@@ -39,7 +48,11 @@ const Footer = () => {
                             <li><a href="https://github.com/aaryan-codes56" target="_blank" rel="noopener noreferrer">Github <span className="arrow">→</span></a></li>
                             <li><a href="https://www.linkedin.com/in/aaryan-krishna-840217317/" target="_blank" rel="noopener noreferrer">Linkedin <span className="arrow">→</span></a></li>
                             <li><a href="https://leetcode.com/u/DIpiow8PMa/" target="_blank" rel="noopener noreferrer">LeetCode <span className="arrow">→</span></a></li>
-                            <li><a href="mailto:aaryankrishna009@gmail.com">Email <span className="arrow">→</span></a></li>
+                            <li>
+                                <a href="#" onClick={handleCopyEmail} className="email-link">
+                                    {copied ? 'Copied!' : 'Email'} <span className="arrow">→</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

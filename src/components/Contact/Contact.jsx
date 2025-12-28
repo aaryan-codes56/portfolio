@@ -4,9 +4,17 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
     const [focusedInput, setFocusedInput] = useState(null);
+    const [copied, setCopied] = useState(false);
 
     const handleFocus = (id) => setFocusedInput(id);
     const handleBlur = () => setFocusedInput(null);
+
+    const handleCopyEmail = (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText('aaryankrishna009@gmail.com');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
 
     return (
         <section className="contact section" id="contact">
@@ -32,7 +40,9 @@ const Contact = () => {
                             <a href="https://www.linkedin.com/in/aaryan-krishna-840217317/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
                             <a href="https://github.com/aaryan-codes56" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
                             <a href="https://leetcode.com/u/DIpiow8PMa/" target="_blank" rel="noopener noreferrer" className="social-link">LeetCode</a>
-                            <a href="mailto:aaryankrishna009@gmail.com" className="social-link">Email</a>
+                            <a href="#" onClick={handleCopyEmail} className="social-link">
+                                {copied ? 'Email Copied!' : 'Email'}
+                            </a>
                         </div>
                     </div>
 
