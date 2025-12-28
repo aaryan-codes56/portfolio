@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../assets/logo.png';
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState('home');
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,40 +32,84 @@ const Navbar = () => {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
             setActiveSection(id);
+            setIsOpen(false);
         }
     };
 
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    const sidebarVariants = {
+        closed: { x: "100%", opacity: 0 },
+        open: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 100, damping: 20 } }
+    };
+
     return (
-        <motion.nav
-            className={`navbar ${isScrolled ? 'scrolled' : ''}`}
-            initial={{ y: -100, x: "-50%", opacity: 0 }}
-            animate={{ y: 0, x: "-50%", opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        >
-            <div className="navbar-container">
-                <div className="logo" onClick={() => scrollToSection('home')}>
-                    <img src={logo} alt="AK Logo" style={{ height: '32px', width: 'auto' }} />
+        <>
+            <motion.nav
+                className={`navbar ${isScrolled ? 'scrolled' : ''}`}
+                initial={{ y: -100, x: "-50%", opacity: 0 }}
+                animate={{ y: 0, x: "-50%", opacity: 1 }}
+                transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+            >
+                <div className="navbar-container">
+                    <div className="logo" onClick={() => scrollToSection('home')}>
+                        <img src={logo} alt="AK Logo" style={{ height: '32px', width: 'auto' }} />
+                    </div>
+
+                    {/* Desktop Menu */}
+                    <ul className="nav-links desktop-menu">
+                        {['about', 'work', 'skills', 'contact'].map((item) => (
+                            <li
+                                key={item}
+                                onClick={() => scrollToSection(item)}
+                                className={activeSection === item ? 'active' : ''}
+                            >
+                                {activeSection === item && (
+                                    <motion.div
+                                        layoutId="active-pill"
+                                        className="active-pill"
+                                        transition={{ type: "spring", duration: 0.6 }}
+                                    />
+                                )}
+                                <span className="nav-text">{item}</span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Hamburger Icon */}
+                    <div className={`hamburger-menu ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </div>
                 </div>
-                <ul className="nav-links">
-                    {['about', 'work', 'skills', 'contact'].map((item) => (
-                        <li
-                            key={item}
-                            onClick={() => scrollToSection(item)}
-                            className={activeSection === item ? 'active' : ''}
-                        >
-                            {activeSection === item && (
-                                <motion.div
-                                    layoutId="active-pill"
-                                    className="active-pill"
-                                    transition={{ type: "spring", duration: 0.6 }}
-                                />
-                            )}
-                            <span className="nav-text">{item}</span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </motion.nav>
+            </motion.nav>
+
+            {/* Mobile Sidebar */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className="sidebar"
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        variants={sidebarVariants}
+                    >
+                        <ul className="sidebar-links">
+                            {['about', 'work', 'skills', 'contact'].map((item) => (
+                                <li
+                                    key={item}
+                                    onClick={() => scrollToSection(item)}
+                                    className={activeSection === item ? 'active' : ''}
+                                >
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
 
