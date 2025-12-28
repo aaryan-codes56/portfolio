@@ -171,7 +171,12 @@
 
 @media (max-width: 480px) {
     .name {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        word-wrap: break-word;
+    }
+
+    .role-text {
+        font-size: 1.5rem;
     }
 
     .cta-buttons {
