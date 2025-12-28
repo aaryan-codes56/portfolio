@@ -123,18 +123,22 @@
 }
 
 .hero-image {
-    max-width: 100%;
-    height: 400px;
-    /* Fixed height for cropping */
+    max-width: 350px;
+    /* Fixed width for circle */
+    height: 350px;
+    /* Fixed height for circle */
     width: 100%;
-    border-radius: 20px;
+    border-radius: 50%;
+    /* Make it circular */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    /* Slightly thicker border for definition */
     /* Optional: Enhance image with subtle filter if needed */
-    filter: brightness(0.9) contrast(1.1);
+    filter: brightness(0.95) contrast(1.1);
     object-fit: cover;
     object-position: center top;
     /* Center horizontally, top vertically to keep face */
+    aspect-ratio: 1/1;
 }
 
 @media (max-width: 968px) {
