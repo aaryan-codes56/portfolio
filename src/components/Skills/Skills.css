@@ -55,6 +55,7 @@
 @media (max-width: 768px) {
     .skills-container {
         grid-template-columns: 1fr;
+        /* Force single column on mobile */
         gap: var(--spacing-md);
     }
 }
