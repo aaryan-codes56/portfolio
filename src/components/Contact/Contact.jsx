@@ -29,10 +29,10 @@ const Contact = () => {
                         </p>
 
                         <div className="social-links">
-                            <a href="#" className="social-link">LinkedIn</a>
-                            <a href="#" className="social-link">GitHub</a>
-                            <a href="#" className="social-link">Twitter</a>
-                            <a href="mailto:hello@aaryankrishna.com" className="social-link">Email</a>
+                            <a href="https://www.linkedin.com/in/aaryan-krishna-840217317/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                            <a href="https://github.com/aaryan-codes56" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+                            <a href="https://leetcode.com/u/DIpiow8PMa/" target="_blank" rel="noopener noreferrer" className="social-link">LeetCode</a>
+                            <a href="mailto:aaryankrishna009@gmail.com" className="social-link">Email</a>
                         </div>
                     </div>
 

@@ -37,8 +37,9 @@ const Footer = () => {
                         <h4 className="footer-heading">CONNECT</h4>
                         <ul className="footer-links">
                             <li><a href="https://github.com/aaryan-codes56" target="_blank" rel="noopener noreferrer">Github <span className="arrow">→</span></a></li>
-                            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Linkedin <span className="arrow">→</span></a></li>
-                            <li><a href="mailto:hello@aaryankrishna.com">Email <span className="arrow">→</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/aaryan-krishna-840217317/" target="_blank" rel="noopener noreferrer">Linkedin <span className="arrow">→</span></a></li>
+                            <li><a href="https://leetcode.com/u/DIpiow8PMa/" target="_blank" rel="noopener noreferrer">LeetCode <span className="arrow">→</span></a></li>
+                            <li><a href="mailto:aaryankrishna009@gmail.com">Email <span className="arrow">→</span></a></li>
                         </ul>
                     </div>
                 </div>
