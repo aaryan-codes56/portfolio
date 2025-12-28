@@ -124,14 +124,17 @@
 
 .hero-image {
     max-width: 100%;
-    height: auto;
+    height: 400px;
+    /* Fixed height for cropping */
+    width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
     /* Optional: Enhance image with subtle filter if needed */
     filter: brightness(0.9) contrast(1.1);
-    max-height: 600px;
     object-fit: cover;
+    object-position: top;
+    /* Crop from bottom (keep top visible) */
 }
 
 @media (max-width: 968px) {
