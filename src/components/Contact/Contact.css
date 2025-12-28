@@ -195,7 +195,7 @@
     }
 
     .social-links {
-        gap: 1.2rem;
+        display: none;
     }
 
     .form-group input,
