@@ -59,6 +59,12 @@ img {
     padding: 0 var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
 .section {
     padding: var(--spacing-xl) 0;
 }
