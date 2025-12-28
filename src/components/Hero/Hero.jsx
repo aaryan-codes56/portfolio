@@ -2,7 +2,7 @@ import React from 'react';
 import './Hero.css';
 import { motion } from 'framer-motion';
 import resumePdf from '../../assets/resume.pdf';
-import heroImage from '../../assets/hero-image.png';
+import heroImage from '../../assets/hero-image.jpg';
 
 const Hero = () => {
     return (
