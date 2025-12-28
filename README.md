@@ -1,8 +1,6 @@
-# Portfolio v2 | Aaryan Krishna
+# Portfolio | Aaryan Krishna
 
 A premium, minimalist portfolio built with React, focusing on clean code, smooth animations, and a high-performance user experience.
-
-![Portfolio Preview](public/hero-image.png)
 
 ## ✨ Features
 
