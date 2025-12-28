@@ -70,21 +70,20 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Sidebar */}
-            {isOpen && (
-                <div className="sidebar">
-                    <ul className="sidebar-links">
-                        {['about', 'work', 'skills', 'contact'].map((item) => (
-                            <li
-                                key={item}
-                                onClick={() => scrollToSection(item)}
-                                className={activeSection === item ? 'active' : ''}
-                            >
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
+            {/* Mobile Sidebar */}
+            <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+                <ul className="sidebar-links">
+                    {['about', 'work', 'skills', 'contact'].map((item) => (
+                        <li
+                            key={item}
+                            onClick={() => scrollToSection(item)}
+                            className={activeSection === item ? 'active' : ''}
+                        >
+                            {item}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </>
     );
 };
