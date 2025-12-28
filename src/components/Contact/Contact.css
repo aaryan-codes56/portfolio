@@ -3,16 +3,17 @@
     padding-bottom: var(--spacing-xl);
 }
 
-
 .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.2fr;
+    /* Reduced form width slightly */
     gap: var(--spacing-xl);
     align-items: start;
 }
 
 .contact-info {
-    padding-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    /* Reduced top padding */
 }
 
 .contact-cta {
@@ -27,7 +28,7 @@
 .contact-subtext {
     font-size: 1.1rem;
     color: var(--gray);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 400px;
 }
@@ -35,12 +36,15 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1.25rem;
+    /* Reduced gap */
     background: var(--glass-bg);
-    padding: var(--spacing-xl);
+    padding: 2rem;
+    /* Reduced from spacing-xl to fixed 2rem */
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 .form-group {
@@ -48,7 +52,7 @@
     flex-direction: column;
     border-bottom: 1px solid var(--border-color);
     transition: border-color var(--transition-medium);
-    padding-bottom: var(--spacing-xs);
+    padding-bottom: 0.5rem;
 }
 
 .form-group.focused {
@@ -57,11 +61,12 @@
 }
 
 .form-group label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    /* Slightly smaller */
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--gray);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.25rem;
     transition: color var(--transition-medium);
 }
 
@@ -73,11 +78,11 @@
 .form-group textarea {
     border: none;
     background: transparent;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: inherit;
     width: 100%;
     outline: none;
-    padding: var(--spacing-xs) 0;
+    padding: 0.5rem 0;
     color: var(--white);
     resize: vertical;
 }
@@ -90,12 +95,13 @@
 .submit-btn {
     background-color: var(--white);
     color: var(--black);
-    padding: 1rem 3rem;
+    padding: 0.8rem 2.5rem;
+    /* More compact button */
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     align-self: flex-start;
-    margin-top: var(--spacing-sm);
+    margin-top: 1rem;
     transition: all var(--transition-fast);
     border: 1px solid var(--white);
     cursor: pointer;
@@ -109,8 +115,9 @@
 
 .social-links {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .social-link {
@@ -120,6 +127,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
     position: relative;
+    padding-bottom: 2px;
 }
 
 .social-link::after {
@@ -127,7 +135,7 @@
     position: absolute;
     width: 0;
     height: 1px;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     background-color: var(--accent);
     transition: width var(--transition-fast);
@@ -144,7 +152,11 @@
 @media (max-width: 900px) {
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
+        gap: 3rem;
+    }
+
+    .contact-form {
+        padding: 1.75rem;
     }
 
     .contact-cta {
@@ -153,7 +165,6 @@
 
     .contact-subtext {
         max-width: 100%;
-        font-size: 1rem;
     }
 
     .submit-btn {
@@ -164,16 +175,27 @@
 
 @media (max-width: 480px) {
     .contact {
-        padding-bottom: var(--spacing-md);
+        padding-bottom: 3rem;
     }
 
     .contact-cta {
         font-size: 1.75rem;
     }
 
+    /* Add extra margin/padding for small screens */
+    .contact-info,
     .contact-form {
-        padding: var(--spacing-md);
-        gap: var(--spacing-sm);
+        margin: 0 0.5rem;
+        /* Visual margin from edges if container is tight */
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .social-links {
+        gap: 1.2rem;
     }
 
     .form-group input,
