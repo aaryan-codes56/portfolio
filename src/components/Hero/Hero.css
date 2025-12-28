@@ -133,8 +133,8 @@
     /* Optional: Enhance image with subtle filter if needed */
     filter: brightness(0.9) contrast(1.1);
     object-fit: cover;
-    object-position: top;
-    /* Crop from bottom (keep top visible) */
+    object-position: center top;
+    /* Center horizontally, top vertically to keep face */
 }
 
 @media (max-width: 968px) {
