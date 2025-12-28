@@ -135,25 +135,34 @@
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "brand brand"
+            "nav connect";
+        gap: 2rem 1rem;
+        text-align: left;
         margin-bottom: 2rem;
     }
 
-    .footer-bottom {
-        flex-direction: column-reverse;
-        /* Copyright below button */
-        gap: 1.5rem;
-        text-align: center;
-        padding-top: 1.5rem;
-    }
-
     .footer-brand {
+        grid-area: brand;
         max-width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    .footer-nav {
+        grid-area: nav;
+        justify-self: center;
+        text-align: left;
+    }
+
+    .footer-connect {
+        grid-area: connect;
+        justify-self: center;
+        text-align: left;
     }
 
     .footer-logo {
@@ -172,13 +181,20 @@
     }
 
     .footer-links {
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
     }
 
     .footer-links a {
-        justify-content: center;
-        width: 100%;
-        padding: 0.5rem;
+        justify-content: flex-start;
+        width: auto;
+        padding: 0.5rem 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        text-align: center;
+        padding-top: 1.5rem;
     }
 }

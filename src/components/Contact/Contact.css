@@ -171,6 +171,10 @@
         width: 100%;
         text-align: center;
     }
+
+    .social-links {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -192,10 +196,6 @@
     .contact-form {
         padding: 1.5rem;
         gap: 1rem;
-    }
-
-    .social-links {
-        display: none;
     }
 
     .form-group input,
