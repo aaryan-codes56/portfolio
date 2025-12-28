@@ -161,3 +161,23 @@
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    .contact {
+        padding-bottom: var(--spacing-md);
+    }
+
+    .contact-cta {
+        font-size: 1.75rem;
+    }
+
+    .contact-form {
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+    }
+}
