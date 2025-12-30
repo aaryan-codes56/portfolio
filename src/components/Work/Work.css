@@ -18,7 +18,6 @@
 
 .project-card {
     background: var(--glass-bg);
-    padding: var(--spacing-md);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     transition: all var(--transition-medium);
@@ -36,10 +35,30 @@
     transform: translateY(-8px);
 }
 
+.project-image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform var(--transition-medium);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
 .project-content {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: var(--spacing-md);
 }
 
 .project-title {

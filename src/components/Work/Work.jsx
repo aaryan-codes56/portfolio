@@ -2,46 +2,36 @@ import React from 'react';
 import './Work.css';
 import { motion } from 'framer-motion';
 
+import rexAiPreview from '../../assets/images/rex-ai-preview.png';
+import heroStock from '../../assets/hero-stock.png';
+
 const projects = [
     {
         id: 1,
-        title: 'Enterprise AI Knowledge Base',
-        description: 'Engineered a RAG-based documentation assistant reducing support query time by 40%. Built with high-performance vector search.',
-        tags: ['Python', 'LangChain', 'React', 'FastAPI'],
-        demoLink: '#',
-        codeLink: '#'
+        title: 'RexAI - AI Career Coach',
+        description: 'Your AI Career Coach for Professional Success. Unlock your potential with personalized career guidance, smart course recommendations, and AI-powered resume building.',
+        tags: ['React.js', 'Node.js', 'MongoDB', 'Express', 'Google Gemini API', 'JWT Auth'],
+        demoLink: 'https://rexxai.netlify.app/',
+        codeLink: 'https://github.com/aaryan-codes56/rex-ai.git',
+        image: rexAiPreview
     },
     {
         id: 2,
-        title: 'Scalable E-Commerce Engine',
-        description: 'Microservices-based shopping platform handling 10k+ concurrent users. Integrated secure Stripe payments and real-time inventory.',
-        tags: ['Next.js', 'Go', 'PostgreSQL', 'Docker'],
+        title: 'E-Commerce Dashboard',
+        description: 'A modern analytics dashboard for online retailers. Features real-time sales tracking, inventory management, and customer insights visualization.',
+        tags: ['React', 'Chart.js', 'Node.js'],
         demoLink: '#',
-        codeLink: '#'
+        codeLink: '#',
+        image: heroStock
     },
     {
         id: 3,
-        title: 'Real-time Collaboration Suite',
-        description: 'Team productivity workspace with live cursor tracking and conflict-free data sync using WebSocket tech.',
-        tags: ['Vue.js', 'Firebase', 'WebSockets'],
+        title: 'Task Management App',
+        description: 'Collaborative task manager with drag-and-drop kanban boards, team assignments, and deadline notifications.',
+        tags: ['Vue.js', 'Firebase', 'Tailwind'],
         demoLink: '#',
-        codeLink: '#'
-    },
-    {
-        id: 4,
-        title: 'Predictive FinTech Dashboard',
-        description: 'Real-time financial analytics platform with interactive data visualization and ML-powered market trend forecasting.',
-        tags: ['TypeScript', 'D3.js', 'Java Spring', 'AWS'],
-        demoLink: '#',
-        codeLink: '#'
-    },
-    {
-        id: 5,
-        title: 'Autonomous Drone Navigation',
-        description: 'Computer vision system for obstacle avoidance and path planning in unstructured environments using SLAM algorithms.',
-        tags: ['C++', 'ROS', 'OpenCV', 'PyTorch'],
-        demoLink: '#',
-        codeLink: '#'
+        codeLink: '#',
+        image: heroStock
     }
 ];
 
@@ -78,6 +68,9 @@ const Work = () => {
                             }}
                             whileHover={{ y: -10 }}
                         >
+                            <div className="project-image-container">
+                                <img src={project.image} alt={project.title} className="project-image" />
+                            </div>
                             <div className="project-content">
                                 <h3 className="project-title">{project.title}</h3>
                                 <p className="project-description">{project.description}</p>
