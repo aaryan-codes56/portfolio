@@ -3,7 +3,8 @@ import './Work.css';
 import { motion } from 'framer-motion';
 
 import rexAiPreview from '../../assets/images/rex-ai-preview.png';
-import heroStock from '../../assets/hero-stock.png';
+import amaraPreview from '../../assets/images/amara-preview.png';
+import poppinFleaPreview from '../../assets/images/poppinflea-preview.png';
 
 const projects = [
     {
@@ -17,21 +18,21 @@ const projects = [
     },
     {
         id: 2,
-        title: 'E-Commerce Dashboard',
-        description: 'A modern analytics dashboard for online retailers. Features real-time sales tracking, inventory management, and customer insights visualization.',
-        tags: ['React', 'Chart.js', 'Node.js'],
-        demoLink: '#',
-        codeLink: '#',
-        image: heroStock
+        title: 'Amara Home Solutions',
+        description: 'Web-based platform for discovering and booking trusted home service providers like electricians and cleaners. Features provider listings, reviews, and a streamlined booking system.',
+        tags: ['React.js', 'Clerk', 'JavaScript', 'Tailwind CSS'],
+        demoLink: 'https://amarasolutions.vercel.app/',
+        codeLink: 'https://github.com/aaryan-codes56/amara-home-service.git',
+        image: amaraPreview
     },
     {
         id: 3,
-        title: 'Task Management App',
-        description: 'Collaborative task manager with drag-and-drop kanban boards, team assignments, and deadline notifications.',
-        tags: ['Vue.js', 'Firebase', 'Tailwind'],
-        demoLink: '#',
-        codeLink: '#',
-        image: heroStock
+        title: 'PoppinFlea - Table Booking System',
+        description: 'A modern, responsive table booking and reservation management system built for a real event organized by Garda Patna and Poppin Event. Features real-time availability, email confirmation, and an admin dashboard.',
+        tags: ['Next.js', 'Google Sheets API', 'Nodemailer', 'CSS Modules'],
+        demoLink: 'https://poppinflea.in/',
+        codeLink: 'https://github.com/aaryan-codes56/poppin-flea.git',
+        image: poppinFleaPreview
     }
 ];
 
