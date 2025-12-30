@@ -32,10 +32,10 @@ const Contact = () => {
         // 3. Go to Account -> API Keys -> Get Public Key
 
         emailjs.sendForm(
-            'YOUR_SERVICE_ID',
-            'YOUR_TEMPLATE_ID',
+            'service_m9fyxlc',
+            'template_l5p4u8c',
             form.current,
-            'YOUR_PUBLIC_KEY'
+            '59otIpNtYXAeHB2vo'
         )
             .then((result) => {
                 console.log(result.text);
