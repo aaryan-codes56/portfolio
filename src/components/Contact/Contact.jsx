@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Contact.css';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
     const [focusedInput, setFocusedInput] = useState(null);
     const [copied, setCopied] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleFocus = (id) => setFocusedInput(id);
     const handleBlur = () => setFocusedInput(null);
@@ -14,6 +18,37 @@ const Contact = () => {
         navigator.clipboard.writeText('aaryankrishna009@gmail.com');
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setStatus({ type: '', message: '' });
+
+        // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
+        // Sign up at https://www.emailjs.com/
+        // 1. Create a Service (e.g., Gmail) -> Get Service ID
+        // 2. Create an Email Template -> Get Template ID
+        // 3. Go to Account -> API Keys -> Get Public Key
+
+        emailjs.sendForm(
+            'YOUR_SERVICE_ID',
+            'YOUR_TEMPLATE_ID',
+            form.current,
+            'YOUR_PUBLIC_KEY'
+        )
+            .then((result) => {
+                console.log(result.text);
+                setStatus({ type: 'success', message: 'Message sent successfully!' });
+                form.current.reset();
+            }, (error) => {
+                console.log(error.text);
+                setStatus({ type: 'error', message: 'Failed to send. Please try again or email directly.' });
+            })
+            .finally(() => {
+                setIsLoading(false);
+                setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+            });
     };
 
     return (
@@ -46,24 +81,28 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                        <div className={`form-group ${focusedInput === 'name' ? 'focused' : ''}`}>
-                            <label htmlFor="name">Name</label>
+                    <form ref={form} className="contact-form" onSubmit={sendEmail}>
+                        <div className={`form-group ${focusedInput === 'user_name' ? 'focused' : ''}`}>
+                            <label htmlFor="user_name">Name</label>
                             <input
                                 type="text"
-                                id="name"
-                                onFocus={() => handleFocus('name')}
+                                name="user_name"
+                                id="user_name"
+                                required
+                                onFocus={() => handleFocus('user_name')}
                                 onBlur={handleBlur}
                                 placeholder="John Doe"
                             />
                         </div>
 
-                        <div className={`form-group ${focusedInput === 'email' ? 'focused' : ''}`}>
-                            <label htmlFor="email">Email</label>
+                        <div className={`form-group ${focusedInput === 'user_email' ? 'focused' : ''}`}>
+                            <label htmlFor="user_email">Email</label>
                             <input
                                 type="email"
-                                id="email"
-                                onFocus={() => handleFocus('email')}
+                                name="user_email"
+                                id="user_email"
+                                required
+                                onFocus={() => handleFocus('user_email')}
                                 onBlur={handleBlur}
                                 placeholder="john@example.com"
                             />
@@ -72,16 +111,28 @@ const Contact = () => {
                         <div className={`form-group ${focusedInput === 'message' ? 'focused' : ''}`}>
                             <label htmlFor="message">Message</label>
                             <textarea
+                                name="message"
                                 id="message"
                                 rows="4"
+                                required
                                 onFocus={() => handleFocus('message')}
                                 onBlur={handleBlur}
                                 placeholder="Tell me about your project..."
                             ></textarea>
                         </div>
 
-                        <button type="submit" className="submit-btn">
-                            Send Message
+                        {status.message && (
+                            <div className={`status-message ${status.type}`} style={{
+                                color: status.type === 'success' ? '#4ade80' : '#f87171',
+                                fontSize: '0.9rem',
+                                marginBottom: '0.5rem'
+                            }}>
+                                {status.message}
+                            </div>
+                        )}
+
+                        <button type="submit" className="submit-btn" disabled={isLoading}>
+                            {isLoading ? 'Sending...' : 'Send Message'}
                         </button>
                     </form>
                 </motion.div>
