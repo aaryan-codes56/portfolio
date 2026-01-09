@@ -31,6 +31,18 @@ const About = () => {
                             When I'm not coding, I'm exploring new research in AI or refining my design sensibilities.
                         </p>
                     </div>
+
+                    <div className="about-stats">
+                        <div className="stat-item">
+                            <span className="stat-number">100+</span>
+                            <span className="stat-label">LeetCode Problems Solved</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number">10+</span>
+                            <span className="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

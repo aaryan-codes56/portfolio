@@ -4,16 +4,19 @@ import { motion } from 'framer-motion';
 
 const skillsData = {
     "Frontend Development": [
-        "React.js", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux", "HTML5/CSS3", "Vue.js"
+        "React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Framer Motion", "HTML5/CSS3", "UI/UX"
     ],
     "Backend & Database": [
-        "Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Firebase", "REST APIs", "GraphQL"
+        "Node.js", "Express", "Python", "MongoDB", "MySQL", "SQL", "PostgreSQL", "Firebase", "Prisma ORM", "REST APIs", "OAuth 2.0"
     ],
     "AI & Machine Learning": [
-        "TensorFlow", "PyTorch", "OpenAI API", "Hugging Face", "Pandas", "NumPy", "Scikit-learn", "Computer Vision"
+        "OpenAI API", "Generative AI", "Pandas", "NumPy"
     ],
     "DevOps & Tools": [
-        "Git/GitHub", "Docker", "AWS", "Vercel", "Figma", "Postman", "Jest", "CI/CD"
+        "Git/GitHub", "Vercel", "Figma", "Canva", "Postman", "Excel"
+    ],
+    "Professional Skills": [
+        "Data Structures", "Problem Solving", "Critical Thinking", "Communication", "Creativity", "Graphic Design"
     ]
 };
 
