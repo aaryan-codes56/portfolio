@@ -17,7 +17,7 @@ const Hero = () => {
                     >
                         <h1 className="name">
                             Aaryan Krishna
-                            <span className="role-text">Full-Stack Developer</span>
+                            <span className="role-text">Developer, Data Analyst & AI Enthusiast</span>
                         </h1>
                     </motion.div>
 
@@ -27,8 +27,8 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        Bridging the gap between complex algorithms and intuitive user experiences.
-                        I build scalable, high-performance web applications powered by modern AI.
+                        Bridging the gap between complex algorithms, actionable insights, and intuitive user experiences.
+                        I build scalable web applications, data-driven dashboards, and intelligent AI systems.
                     </motion.p>
 
                     <motion.div
