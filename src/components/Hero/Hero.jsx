@@ -1,71 +1,41 @@
-import React from 'react';
+import portrait from '../../assets/portrait.webp';
+import { site } from '../../data/site';
+import Button from '../Button/Button';
+import { Icon } from '../Icon/Icon';
 import './Hero.css';
-import { motion } from 'framer-motion';
-import resumePdf from '../../assets/resume.pdf';
-import heroImage from '../../assets/hero-image.jpg';
 
-const Hero = () => {
-    return (
-        <section className="hero" id="home">
-            <div className="container hero-container">
-                <div className="hero-content">
-                    <motion.div
-                        className="name-wrapper"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                    >
-                        <h1 className="name">
-                            Aaryan Krishna
-                            <span className="role-text">Developer, Data Analyst & AI Enthusiast</span>
-                        </h1>
-                    </motion.div>
+export default function Hero() {
+  return (
+    <section className="hero">
+      <div className="page hero__inner">
+        <div className="hero__text">
+          <h1 className="hero__name hero__rise">{site.name}</h1>
+          <p className="hero__headline hero__rise" style={{ '--delay': '90ms' }}>{site.headline}</p>
+          <p className="hero__intro hero__rise" style={{ '--delay': '180ms' }}>{site.intro}</p>
 
-                    <motion.p
-                        className="subtitle"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                    >
-                        Bridging the gap between complex algorithms, actionable insights, and intuitive user experiences.
-                        I build scalable web applications, data-driven dashboards, and intelligent AI systems.
-                    </motion.p>
+          <div className="hero__actions hero__rise" style={{ '--delay': '270ms' }}>
+            <Button href="#work" magnetic>View projects</Button>
+            <Button href={site.resume} download variant="secondary">
+              Download resume <Icon name="download" />
+            </Button>
+          </div>
 
-                    <motion.div
-                        className="cta-buttons"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.5 }}
-                    >
-                        <a href="#work" className="btn btn-primary">
-                            View Projects
-                        </a>
-                        <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                            Download Resume
-                        </a>
-                    </motion.div>
-                </div>
+          <ul className="hero__social hero__rise" style={{ '--delay': '360ms' }}>
+            <li><a className="text-link" href={site.links.github} target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a className="text-link" href={site.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
 
-                <motion.div
-                    className="hero-image-container"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3, duration: 0.8 }}
-                >
-                    <img src={heroImage} alt="Aaryan Krishna" className="hero-image" />
-                    <motion.div
-                        className="availability-badge"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1, duration: 0.5 }}
-                    >
-                        <span className="status-dot"></span>
-                        Open to work
-                    </motion.div>
-                </motion.div>
-            </div>
-        </section>
-    );
-};
-
-export default Hero;
+        <img
+          className="hero__portrait hero__rise"
+          style={{ '--delay': '120ms' }}
+          src={portrait}
+          width="720"
+          height="720"
+          alt="Portrait of Aaryan Krishna"
+          fetchPriority="high"
+        />
+      </div>
+    </section>
+  );
+}

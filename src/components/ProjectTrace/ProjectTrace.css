@@ -1,0 +1,113 @@
+.trace {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.trace__rail {
+  position: relative;
+  display: grid;
+}
+
+.trace__rail::before,
+.trace__rail::after {
+  content: '';
+  position: absolute;
+  top: 1.375rem;
+  bottom: 1.375rem;
+  left: 0.1875rem;
+  width: 1px;
+  background: var(--line);
+}
+
+.trace__rail::after {
+  background: var(--accent);
+  transform: scaleY(var(--progress));
+  transform-origin: top;
+  transition: transform var(--medium) var(--ease-out);
+}
+
+.trace__step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  min-height: 2.75rem;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  transition: color var(--fast) ease;
+}
+
+.trace__dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background-color var(--fast) ease;
+}
+
+.trace__step.is-reached .trace__dot {
+  background: var(--accent);
+}
+
+.trace__step[aria-current='step'] {
+  color: var(--text);
+}
+
+.trace__panel {
+  display: grid;
+  margin-top: var(--space-4);
+}
+
+.trace__detail {
+  grid-area: 1 / 1;
+  max-width: 70ch;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity var(--fast) ease;
+}
+
+.trace__detail.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trace__detail code {
+  color: var(--accent);
+}
+
+.trace__detail p {
+  margin-top: var(--space-1);
+  color: var(--muted);
+}
+
+@media (min-width: 44rem) {
+  .trace__rail {
+    grid-template-columns: repeat(var(--steps), 1fr);
+  }
+
+  .trace__rail::before,
+  .trace__rail::after {
+    top: 0.8125rem;
+    bottom: auto;
+    left: 0.1875rem;
+    right: calc(100% / var(--steps));
+    width: auto;
+    height: 1px;
+  }
+
+  .trace__rail::after {
+    transform: scaleX(var(--progress));
+    transform-origin: left;
+  }
+
+  .trace__step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding-block: var(--space-2);
+  }
+}
